@@ -5,8 +5,8 @@ const Cards = () => {
   return (
     <div className='w-full'>
         <div className='max-w-screen-xl mx-auto py-28 flex gap-1'>
-            <Card width={"basis-1/3"}/>
-            <Card width={"basis-2/3"}/>
+            <Card width={"basis-1/3"} start={false} para={true}/>
+            <Card width={"basis-2/3"} start={true} para={false} hover={"bg-violet-600"}/>
         </div>
     </div>
   )
