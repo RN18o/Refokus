@@ -1,36 +1,39 @@
+import { motion } from "framer-motion";
 import React from "react";
-import { MdArrowRightAlt } from "react-icons/md";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
-const Card = ({ width, start, para,hover="none" }) => {
+function Card({ width, start, para, hover = "false" }) {
   return (
-    <div className={`bg-zinc-700 p-5 rounded-xl hover:${hover} ${width} min-h-[30rem] flex flex-col justify-between`}>
+    <motion.div
+      whileHover={{backgroundColor: hover === "true" ? "#7443ff" : "#3E3E46", padding: "25px"}}
+      className={`bg-zinc-800 p-5 rounded-xl  ${width} min-h-[30rem] flex flex-col justify-between transition-colors duration-300`}
+    >
       <div className="w-full">
         <div className="w-full flex justify-between items-center">
-          <h3>One heading</h3>
-          <MdArrowRightAlt />
+          {start === false ? <h3 className="text-sm">Up Next: News</h3> : <h3 className="text-sm">Get In Touch</h3>}
+          <IoIosArrowRoundForward size={"1.4rem"} />
         </div>
-        <h1 className="text-3xl mt-5">Whatever heading</h1>
+        {start === false ? <h1 className="text-3xl font-regular w-2/3 mt-5">Insights and behind the scenes</h1> : <h1 className="text-3xl font-regular w-[11vw] mt-5">Let's do it, together.</h1>}
       </div>
       <div className="down w-full">
-        {start === true ? (
+        {start && (
           <>
-            <h1 className="text-8xl font-medium tracking-tight leading-none">
-              Start a project
+            <h1 className="text-6xl font-semibold tracking-tight leading-none">
+              Start Your Project
             </h1>
-            <button className="rounded-full py-2 px-5 mt-5 border-[1px] border-zinc-50">
-              {" "}
-              contact us
+            <button className="rounded-full mt-5 py-2 px-5 border-[1px] border-zinc-50">
+              Contact Us
             </button>
           </>
-        ) : null}
+        )}
         {para && (
-          <p className="text-sm mt-4 opacity-55">
-            Explore what drives our teams.
+          <p className="text-sm text-zinc-300 font-regular">
+            Explore what drives our team.
           </p>
         )}
       </div>
-    </div>
+    </motion.div>
   );
-};
+}
 
 export default Card;
