@@ -81,7 +81,7 @@ const Work = () => {
   return (
     <div className="w-full">
       <div className="relative max-w-screen-xl mx-auto">
-        <h1 className="text-[38vw] text-center leading-none tracking-tight select-none font-medium">
+        <h1 className="text-[25vw] lg:text-[38vw] mt-12 lg:mt-0 text-center leading-none tracking-tight select-none font-medium">
           work
         </h1>
         <div className="absolute top-0 w-full h-full">
@@ -97,7 +97,7 @@ const Work = () => {
               )
           )}
         </div>
-        <p className="text-2xl text-center opacity-45 mt-4">
+        <p className="text-lg lg:text-2xl text-center opacity-45 mt-4">
           Web Design, Webflow Development, Creative Development
         </p>
       </div>

@@ -51,7 +51,7 @@ const Products = () => {
     setPostion(val * 23);
   };
   return (
-    <div className=" mt-16 relative">
+    <div className=" mt-5 lg:mt-16 relative flex flex-col flex-wrap">
       {products.map((val, index) => (
         <Product data={val} mover={mover} count={index} />
       ))}
@@ -60,7 +60,7 @@ const Products = () => {
           initial={{ y: postion, x: "-50%" }}
           animate={{ y: postion + "rem" }}
           transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }}
-          className="absolute w-[32rem] h-[23rem] bg-sky-500 left-[40%] rounded-xl -translate-x-[50%] overflow-hidden "
+          className="absolute w-[20rem] h-[15rem] mt-16 lg:mt-0 lg:w-[32rem] lg:h-[23rem] bg-sky-500 left-[40%] rounded-xl -translate-x-[50%] overflow-hidden "
         >
           <motion.div
             animate={{ y: -postion + `rem` }}
