@@ -10,11 +10,11 @@ const Footer = () => {
             <div className='basis-1/2 flex gap-4'>
             <div className='basis-1/3'>
                 <h1 className='mb-4'>Socials</h1>
-               { ["instagram","Twitter (x?)", "LinkedIn",].map((item,index) => <a className='block mt-1 lg:mt-3 capitalize lg:text-[1rem] text-sm text-zinc-600'>{item}</a> )}
+               { ["instagram","Twitter (x?)", "LinkedIn",].map((item,index) => <a key={index} className='block mt-1 lg:mt-3 capitalize lg:text-[1rem] text-sm text-zinc-600'> {item}</a> )}
             </div>
             <div className='basis-1/3'>
                 <h1 className='mb-4'>Sitemap</h1>
-               { ["Home","Work", "Careers","contact"].map((item,index) => <a className='block mt-1 lg:mt-3 capitalize lg:text-[1rem] text-sm text-zinc-600'>{item}</a> )}
+               { ["Home","Work", "Careers","contact"].map((item,index) => <a key={index} className='block mt-1 lg:mt-3 capitalize lg:text-[1rem] text-sm text-zinc-600'>{item}</a> )}
             </div>
             <div className='basis-1/2 lg:text-[1rem] text-sm flex flex-col items-end'>
                 <p>Refokus is a pioneering digital agency driven by design and empowered by technology.</p>

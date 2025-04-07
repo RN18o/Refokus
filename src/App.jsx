@@ -10,7 +10,7 @@ import LocomotiveScroll from "locomotive-scroll";
 import Customcursor from "./components/Customcursor";
 
 const App = () => {
-  const locomotiveScroll = new LocomotiveScroll();
+   new LocomotiveScroll();
   return (
     <div className='w-full h-auto bg-zinc-900 text-white font-["satoshi"] overflow-hidden'>
       <Customcursor />
