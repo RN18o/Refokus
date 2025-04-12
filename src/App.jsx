@@ -13,7 +13,7 @@ const App = () => {
    new LocomotiveScroll();
   return (
     <div className='w-full h-auto bg-zinc-900 text-white font-["satoshi"] overflow-hidden'>
-      {/* <Customcursor /> */}
+      <Customcursor />
       <Navbar />
       <Work />
       <Stripes />
